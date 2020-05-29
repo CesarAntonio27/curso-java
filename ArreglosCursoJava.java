@@ -22,7 +22,29 @@ public class ArreglosCursoJava {
 		
 		//definiendo un arreglo 2D con char / el "= { {}, {} };" 
 		char[][] days = { {'M','T','W'}, {'M','T','W'} };
-
+		
+		//definiendo arreglo y asigno valores con indices 
+		char[] names = new char [4];
+		names[0] = 'h';
+		names[1] = 'o';
+		names[2] = 'l';
+		names[3] = 'a';
+		System.out.println(names[0]);
+		System.out.println(names[1]);
+		System.out.println(names[2]);
+		System.out.println(names[3]);
+		
+		System.out.println("encontrando a monkey");
+		//creando un arreglo de 4 dimensiones 
+		char[][][][] monkey = new char [2][3][2][2];
+		
+		//encontrando un elemento dentro de un arreglo con su indice
+		monkey [1][0][0][1] = 'm';
+		System.out.println(monkey [1][0][0][1]);
+		
+		
+		
+		
 	}
 
 }
