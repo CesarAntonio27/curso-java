@@ -21,13 +21,13 @@ public class HolaMundo {
 		
 		char genero = 'f';
 		
-		//tipo de dato lógico
+		//tipo de dato lÃ³gico
 		
 		
 		boolean isvisible = true;
 		boolean funciona = false;
 		
-		//ejemplo de naming 
+		//ejemplo de como se pueden escribir las variables
 		
 		int variable = 1;
 		int Variable = 2;
