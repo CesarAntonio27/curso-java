@@ -37,13 +37,36 @@ public class ArreglosCursoJava {
 		System.out.println("encontrando a monkey");
 		//creando un arreglo de 4 dimensiones 
 		char[][][][] monkey = new char [2][3][2][2];
-		
 		//encontrando un elemento dentro de un arreglo con su indice
 		monkey [1][0][0][1] = 'm';
 		System.out.println(monkey [1][0][0][1]);
 		
 		
+		//operadores de incremento ++ y decremento --
+		//Post Fijo - Pre incremento
+		int i = 5;
+		System.out.println(++i);
+		System.out.println(i);
+
+		//Pre fijo - Post incremento
+		int l = 3;
+		System.out.println(l++);
+		System.out.println(l);
 		
+		//operadores de equidad
+		
+		int q = 2;
+		int p = 9;
+		
+		System.out.println(q==p);
+		System.out.println(q!=p);
+		
+		
+		int s = 9;
+		int r = 9;
+		
+		System.out.println(r==s);
+		System.out.println(r!=s);
 		
 	}
 
