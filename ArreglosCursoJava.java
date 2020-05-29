@@ -4,6 +4,24 @@ public class ArreglosCursoJava {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		//arrays
+		//declaracions de array / el "= new int []" define el tamaño del arreglo
+		int[] arregloInt = new int [3];//tiene 3 espacios
+		//otra forma de declarar un array / el "= new double []" define el tamaño del arreglo
+		double arregloDouble[] = new double [3];//tiene 3 espacios
+		
+		//definiendo un arrey de dos dimanesiones / el "= new int [][]" define el tamaño del arreglo
+		int [][] arrey2D = new int [2][3];//tiene 6 espacios
+		
+		
+		//definiendo arrey de tres dimensiones/ el "= new int [][][]" define el tamaño del arreglo
+		
+		int [][][] arrey3D = new int [3][3][2];//tiene 18 espacios
+		
+		//definiendo un arreglo 2D con char / el "= { {}, {} };" 
+		char[][] days = { {'M','T','W'}, {'M','T','W'} };
 
 	}
 
