@@ -78,6 +78,46 @@ public class ArreglosCursoJava {
 		System.out.println("!n -> " + (!n));
 		System.out.println("!m -> " + (!m));
 		
+	//control de flujo if/else
+		
+		if (q > p) {
+			//true 
+			System.out.println("si es mayor");
+		} else {
+			//false 
+			System.out.println("no es mayor");
+		}
+		
+		//ciclos 
+		//bucle while
+		int e = 1;
+				while (e <= 5 ) {
+					System.out.println("e es menor o igual que 5");
+					e++;
+		};
+
+		//salto de linea 
+		System.out.println("");
+		
+        //bucle for
+		int numeros [] = new int[5] ;
+		for (int c = 0; c < 5; c++) {
+			numeros[c]=  c;
+			System.out.println("numeros ["+c+"]: " + numeros [c]);
+		}
+		
+		
+		
+		//bucle foreach
+		for (int j : numeros) {
+			System.out.println(j);
+					
+		}
+		
+		
+		
+		
+		System.out.println("continuamos con el flujo");
 	}
 
 }
