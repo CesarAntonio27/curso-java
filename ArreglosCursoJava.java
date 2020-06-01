@@ -68,6 +68,16 @@ public class ArreglosCursoJava {
 		System.out.println(r==s);
 		System.out.println(r!=s);
 		
+		//operadores logicos 
+		
+		boolean n = false;
+		boolean m = true;
+		
+		System.out.println("n && m -> " + (n && m));
+		System.out.println("n || m -> " + (n || m));
+		System.out.println("!n -> " + (!n));
+		System.out.println("!m -> " + (!m));
+		
 	}
 
 }
