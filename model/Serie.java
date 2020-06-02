@@ -9,7 +9,15 @@ public class Serie {
 	private short year;
 	private boolean viewed;
 	private int timeviewed;
+	
 	private int sessionquantity;
+
+	public Serie(String tittle, String genre, int duration) {
+		super();
+		this.tittle = tittle;
+		this.genre = genre;
+		this.duration = duration;
+	}
 	
 	//chapters[]
 	

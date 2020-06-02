@@ -11,5 +11,14 @@ public class Book {
 	private String isbn;
 	private boolean readed;
 	private int timereaded;
-
+	public Book(String tittle, Date editiondate, String editorial, String isbn) {
+		super();
+		this.tittle = tittle;
+		this.editiondate = editiondate;
+		this.editorial = editorial;
+		this.isbn = isbn;
+	}
+    
+	
+	
 }

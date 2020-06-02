@@ -9,5 +9,14 @@ public class Magazine {
 	private Date editiondate;
 	private String editorial;
 	private String[] authors;
+	
+	public Magazine(String tittle, Date editiondate, String editorial) {
+		super();
+		this.tittle = tittle;
+		this.editiondate = editiondate;
+		this.editorial = editorial;
+	}
+	
+	
 
 }

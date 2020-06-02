@@ -8,5 +8,14 @@ public class Chapter {
 	private boolean viewed;
 	private int timeviewed;
 	private int sessionnumber;
+	
+	public Chapter(String tittle, int duration, short year) {
+		super();
+		this.tittle = tittle;
+		this.duration = duration;
+		this.year = year;
+	}
+	
+	
 
 }
