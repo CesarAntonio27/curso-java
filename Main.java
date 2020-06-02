@@ -1,17 +1,25 @@
 package mx.com.titaniumsolutions.Amazon_Vewer;
 
 import mx.com.titaniumsolutions.Amazon_Vewer.model.*;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		Movie movie = new Movie();
-		movie.tittle = "coco";
-		movie.timeviewed = 120;
+		showMenu();
 
-		int exit = 0;
 		
+		
+		
+
+	}
+
+	
+	
+	
+	public static void showMenu() {
+        
+		int exit = 0;
 		do {
 			System.out.println("BIENVENIDOS A AMAZON VIEWER");
 			System.out.println("");
@@ -22,25 +30,29 @@ public class Main {
 			System.out.println("4. Magazines");
 			System.out.println("0. Exit");
 			
-			byte opcion = 5;
+			int opcion = 0;
 			switch (opcion) {
+			case 0: 
+				//salir
+				
+				
+				break;
 			case 1: 
-				System.out.println("lista de movies:");
+				showMovies();
 				break;
 			case 2: 
-				System.out.println("lista de series:");
+				showSeries();
 				break;
 			case 3: 
-				System.out.println("lista de books:");
+				showBooks();
 				break;
 			case 4: 
-				System.out.println("lista de magazines:");
-				break;
-			case 0: 
-				System.out.println("gracias por usar Amazon VIewer ");
+				showMagazines();
 				break;
 			default:
-				System.out.println("opcion invalida");
+				System.out.println("");
+				System.out.println("....¡¡opcion invalida!!....");
+				System.out.println("");
 				break; 
 			
 				
@@ -48,8 +60,62 @@ public class Main {
 			
 		} while (exit != 0);
 		
+	}
+	
+	public static void showMovies() {
+		int exit = 0;
 		
-
+		do {
+			System.out.println("");
+			System.out.println("::MOVIES::");
+			System.out.println("");
+			
+		} while (exit != 0);
+	}
+	
+	public static void showBooks() {
+	int exit = 0;
+		
+		do {
+			System.out.println("");
+			System.out.println("::BOOKS::");
+			System.out.println("");
+			
+		} while (exit != 0);
+	}
+	
+	public static void showMagazines() {
+	int exit = 0;
+		
+		do {
+			System.out.println("");
+			System.out.println("::MAGAZINES::");
+			System.out.println("");
+			
+		} while (exit != 0);
+	}
+	
+	public static void showSeries() {
+	int exit = 0;
+		
+		do {
+			System.out.println("");
+			System.out.println("::SERIES::");
+			System.out.println("");
+			
+		} while (exit != 0);
+	}
+	
+	public static void showChapters() {
+	int exit = 0;
+		
+		do {
+			System.out.println("");
+			System.out.println("::CHAPTERS::");
+			System.out.println("");
+			
+		} while (exit != 0);
 	}
 
+	
 }
