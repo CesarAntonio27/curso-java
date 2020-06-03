@@ -1,8 +1,8 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
+import java.util.Date;
 
-
-public class Movie extends Film {
+public class Movie extends Film implements IVisualisable {
 	private int id;
 	private int timeviewed;
 	
@@ -50,6 +50,30 @@ public class Movie extends Film {
 				"\n Duration: " + getDuration();
 		
 		
+	}
+
+
+
+
+	@Override
+	public Date starTosee(Date dateI) {
+		// TODO Auto-generated method stub
+		
+		return dateI;
+	}
+
+
+
+
+	@Override
+	public void stoopTosee(Date dateI, Date dateF) {
+		// TODO Auto-generated method stub
+		if (dateF.getSeconds() > dateI.getSeconds()) {
+			setTimeviewed(dateF.getSeconds() - dateI.getSeconds());
+		}else {
+			setTimeviewed(0);
+		}
+		 
 	}
 	
 	

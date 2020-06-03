@@ -2,7 +2,7 @@ package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
 import java.util.Date;
 
-public class Book extends Publication {
+public class Book extends Publication implements IVisualisable {
 	private int id;
 	private String isbn;
 	private boolean readed;
@@ -70,5 +70,27 @@ public class Book extends Publication {
 			detailBook += "\t" + getAuthors()[i];
 		}
 		return detailBook;
+	}
+
+
+
+
+	@Override
+	public Date starTosee(Date dateI) {
+		// TODO Auto-generated method stub
+		return dateI;
+	}
+
+
+
+
+	@Override
+	public void stoopTosee(Date dateI, Date dateF) {
+		// TODO Auto-generated method stub
+		if (dateF.getSeconds() > dateI.getSeconds()) {
+			setTimereaded(dateF.getSeconds() - dateI.getSeconds());
+		}else {
+			setTimereaded(0);
+		}
 	}
 }
