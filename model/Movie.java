@@ -39,6 +39,17 @@ public class Movie extends Film {
 		this.timeviewed = timeviewed;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n Title: " + getTitle() +
+				"\n Genre: " + getGenre() +
+				"\n Year: " + getYear() +
+				"\n Creator: " + getCreator() +
+				"\n Duration: " + getDuration();
+		
+		
+	}
 	
 	
 	

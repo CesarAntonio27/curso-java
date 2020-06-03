@@ -57,6 +57,14 @@ public class Magazine {
 		this.authors = authors;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n Title: " + getTittle() +
+				"\n Edition Date: " + getEditiondate() +
+				"\n Editorial: " + getEditorial();
+		
+		
+	}
 
 }

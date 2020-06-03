@@ -11,6 +11,10 @@ public class Book {
 	private String isbn;
 	private boolean readed;
 	private int timereaded;
+	
+	
+	
+	
 	public Book(String tittle, Date editiondate, String editorial, String isbn) {
 		super();
 		this.tittle = tittle;
@@ -18,6 +22,8 @@ public class Book {
 		this.editorial = editorial;
 		this.isbn = isbn;
 	}
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -68,5 +74,12 @@ public class Book {
 	}
     
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n Title: " + getTittle() +
+				"\n Edition Date: " + getEditiondate() +
+				"\n Editorial: " + getEditorial() +
+				"\n Isbn: " + getIsbn();
+	}
 }

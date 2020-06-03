@@ -1,68 +1,18 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
-public class Chapter {
+public class Chapter extends Movie{
+	
+	
 	private int id;
-	private String tittle;
-	private int duration;
-	private short year;
-	private boolean viewed;
-	private int timeviewed;
 	private int sessionnumber;
 	
-	public Chapter(String tittle, int duration, short year) {
-		super();
-		this.tittle = tittle;
-		this.duration = duration;
-		this.year = year;
+	public Chapter(String title, String genre, String creator, int duration, short year, int sessionnumber) {
+		super(title, genre, creator, duration, year);
+		// TODO Auto-generated constructor stub
+		this.setSessionnumber(sessionnumber);
 	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getTittle() {
-		return tittle;
-	}
-
-	public void setTittle(String tittle) {
-		this.tittle = tittle;
-	}
-
-	public int getDuration() {
-		return duration;
-	}
-
-	public void setDuration(int duration) {
-		this.duration = duration;
-	}
-
-	public short getYear() {
-		return year;
-	}
-
-	public void setYear(short year) {
-		this.year = year;
-	}
-
-	public boolean isViewed() {
-		return viewed;
-	}
-
-	public void setViewed(boolean viewed) {
-		this.viewed = viewed;
-	}
-
-	public int getTimeviewed() {
-		return timeviewed;
-	}
-
-	public void setTimeviewed(int timeviewed) {
-		this.timeviewed = timeviewed;
-	}
+	
+	
 
 	public int getSessionnumber() {
 		return sessionnumber;
@@ -72,6 +22,14 @@ public class Chapter {
 		this.sessionnumber = sessionnumber;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n Title: " + getTitle() +
+				"\n Session Number: " + getSessionnumber() +
+				"\n Duration: " + getDuration();
+		
+		
+	}
 
 }
