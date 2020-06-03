@@ -15,10 +15,15 @@ public class Magazine extends Publication {
 	public int getId() {
 		return id;
 	}
+
 	
-	
-	public void setId() {
-		this.id = id;
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n ::MAGAZINE:: " +
+				"\n Title: " + getTittle() +
+				"\n Editorial: " + getEditorial() +
+				"\n Edition Date: " + getEditiondate();
 	}
 
 	

@@ -42,7 +42,8 @@ public class Movie extends Film {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\n Title: " + getTitle() +
+		return  "\n ::MOVIE::" +
+				"\n Title: " + getTitle() +
 				"\n Genre: " + getGenre() +
 				"\n Year: " + getYear() +
 				"\n Creator: " + getCreator() +
