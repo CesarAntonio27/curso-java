@@ -36,7 +36,7 @@ public class Main {
 			switch (opcion) {
 			case 0: 
 				//salir
-				
+				exit = 0;
 				
 				break;
 			case 1: 
@@ -71,15 +71,15 @@ public class Main {
 	}
 	
 	public static void showMovies() {
-		int exit = 0;
+		int exit = 1;
 		ArrayList<Movie> movies = Movie.makemovieslist();
 		do {
 			System.out.println("");
 			System.out.println("::MOVIES::");
 			System.out.println("");
-			for (int i = 0; i < movies.size(); i++) {//imprimirá: 1.movie 1
+			for (int i = 0; i < movies.size(); i++) {//imprimirá: 1.movie 1 visto: si/no
 				
-				System.out.println(i+1 + "." + movies.get(i).getTitle() + "visto:" + movies.get(i).isViewed());
+				System.out.println(i+1 + "." + movies.get(i).getTitle() + " visto:" + movies.get(i).isViewed());
 				
 			}
 			
@@ -87,17 +87,45 @@ public class Main {
 			System.out.println("0. regresar al Menu");
 			System.out.println();
 			
+			//leer respuesta del usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			//opcion que regresa al menu en caso de ser 0
+			if(response == 0) {
+				showMenu();
+			}
+			
+			
+			Movie movieSelected = movies.get(response - 1);
+			movieSelected.setViewed(true);
+			Date dateI = movieSelected.starTosee(new Date());
+			
+			for (int i = 0; i < 1000000; i++) {
+				System.out.println(".................");
+				
+			}
+			
+			//termine de verla
+			
+			movieSelected.stoopTosee(dateI, new Date() );
+			System.out.println();
+			System.out.println("viste: " + movieSelected);
+			System.out.println("por: "+ movieSelected.getTimeviewed() + "milisegundos");
+			
+			
+			
 		} while (exit != 0);
 	}
 	
 	public static void showBooks() {
 	int exit = 0;
-		
+	
+
 		do {
 			System.out.println("");
 			System.out.println("::BOOKS::");
 			System.out.println("");
-			
+		
 		} while (exit != 0);
 	}
 	
@@ -114,22 +142,79 @@ public class Main {
 	
 	public static void showSeries() {
 	int exit = 0;
-		
+	ArrayList<Serie> series = Serie.makeserielist();	
 		do {
 			System.out.println("");
 			System.out.println("::SERIES::");
 			System.out.println("");
+			
+			for (int i = 0; i < series.size(); i++) {//imprimirá: 1.movie 1
+				
+				System.out.println(i+1 + "." + series.get(i).getTitle() + "  visto:" + series.get(i).isViewed());
+				
+			}
+			
+			
+			System.out.println("0. regresar al Menu");
+			System.out.println();
+			
+			//leer respuesta del usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			//opcion que regresa al menu en caso de ser 0
+			if(response == 0) {
+				showMenu();
+			}else {
+				showChapters();
+			}
 			
 		} while (exit != 0);
 	}
 	
 	public static void showChapters() {
 	int exit = 0;
-		
+	ArrayList<Chapter> chapters = Chapter.makechapterlist(); 	
 		do {
 			System.out.println("");
 			System.out.println("::CHAPTERS::");
 			System.out.println("");
+			
+			
+			for (int i = 0; i < chapters.size(); i++) {//imprimirá: 1.chapter 1 visto: si/no
+				
+				System.out.println(i+1 + "." + chapters.get(i).getTitle() + " visto:" + chapters.get(i).isViewed());
+				
+			}
+			
+			
+			System.out.println("0. regresar al Menu");
+			System.out.println();
+			
+			//leer respuesta del usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			//opcion que regresa al menu en caso de ser 0
+			if(response == 0) {
+				showMenu();
+			}
+			 
+			Chapter chapterSelected = chapters.get(response - 1);
+			chapterSelected.setViewed(true);
+			Date dateI = chapterSelected.starTosee(new Date());
+			
+			for (int i = 0; i < 1000000; i++) {
+				System.out.println(".................");
+				
+			}
+			
+			//termine de verla
+			
+			chapterSelected.stoopTosee(dateI, new Date() );
+			System.out.println();
+			System.out.println("viste: " + chapterSelected);
+			System.out.println("por: "+ chapterSelected.getTimeviewed() + "milisegundos");
+			
+			showChapters();
 			
 		} while (exit != 0);
 	}

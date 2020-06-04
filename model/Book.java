@@ -1,5 +1,6 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Book extends Publication implements IVisualisable {
@@ -93,4 +94,26 @@ public class Book extends Publication implements IVisualisable {
 			setTimereaded(0);
 		}
 	}
+	
+	
+	public static ArrayList<Book> makebookslist (){
+		
+		ArrayList<Book>  books = new ArrayList<Book>();
+
+		//creando movies con un bucle para ahorrar memoria 
+		for (int i = 1; i <= 5; i++) {
+			books.add(new Book("tittle: " + i,new Date(2010 + i) , "editorial:" + i, "isbn"));
+			
+		}
+		
+		
+		return books;
+		
+	}
+	
+	
+	
+	
+	
+	
 }

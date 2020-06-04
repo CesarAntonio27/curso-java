@@ -1,6 +1,7 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Serie extends Film{
 	
@@ -53,6 +54,24 @@ public class Serie extends Film{
 		
 		
 	}
+	
+	
+	
+	public static ArrayList<Serie> makeserielist (){
+		
+		ArrayList<Serie>  series = new ArrayList<Serie>();
+
+		//creando movies con un bucle para ahorrar memoria 
+		for (int i = 1; i <= 5; i++) {
+			
+			series.add(new Serie("serie" + i, "suspenso", "creador:" + i, i));
+		}
+		
+		
+		return series;
+		
+	}
+	
 	
 	//chapters[]
 	

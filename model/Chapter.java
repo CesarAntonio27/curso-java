@@ -1,5 +1,7 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
+import java.util.ArrayList;
+
 public class Chapter extends Movie{
 	
 	
@@ -37,5 +39,24 @@ public class Chapter extends Movie{
 		
 		
 	}
+	
+	
+public static ArrayList<Chapter> makechapterlist (){
+		
+		ArrayList<Chapter>  chapters = new ArrayList<Chapter>();
+
+		//creando chapters con un bucle para ahorrar memoria 
+		for (int i = 1; i <= 5; i++) {
+			
+			chapters.add(new Chapter("capitulo: "+i, "suspenso: " + i, "cesar", 40+i, (short)(2019+i), 1));
+		}
+		
+		
+		return chapters;
+		
+	}
+	
+	
+	
 
 }
