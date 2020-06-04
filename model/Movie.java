@@ -1,5 +1,6 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Movie extends Film implements IVisualisable {
@@ -77,7 +78,19 @@ public class Movie extends Film implements IVisualisable {
 	}
 	
 	
-	
+	public static ArrayList<Movie> makemovieslist (){
+		
+		ArrayList<Movie>  movies = new ArrayList();
+
+		//creando movies con un bucle para ahorrar memoria 
+		for (int i = 1; i <= 5; i++) {
+			movies.add(new Movie("movie: " + i,"genero: " + i, "creador: " + i, 120+i,(short)(2020+i)));
+		}
+		
+		
+		return movies;
+		
+	}
 	
 	
 	
