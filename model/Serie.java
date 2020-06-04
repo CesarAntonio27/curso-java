@@ -1,10 +1,12 @@
 package mx.com.titaniumsolutions.Amazon_Vewer.model;
 
+import java.util.ArrayList;
+
 public class Serie extends Film{
 	
 	private int id;
 	private int sessionQuantity;
-	private Chapter[] chapters;
+	private ArrayList<Chapter> Chapters;
 	
 
 	public Serie(String title, String genre, String creator, int sesssionQuatity){
@@ -30,13 +32,13 @@ public class Serie extends Film{
 	}
 
 
-	public Chapter[] getChapters() {
-		return chapters;
+	public ArrayList<Chapter> getChapters() {
+		return Chapters;
 	}
 
 
-	public void setChapters(Chapter[] chapters) {
-		this.chapters = chapters;
+	public void setChapters(ArrayList<Chapter> chapters) {
+		this.Chapters = chapters;
 	}
 	
 	
