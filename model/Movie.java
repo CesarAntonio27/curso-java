@@ -69,8 +69,8 @@ public class Movie extends Film implements IVisualisable {
 	@Override
 	public void stoopTosee(Date dateI, Date dateF) {
 		// TODO Auto-generated method stub
-		if (dateF.getSeconds() > dateI.getSeconds()) {
-			setTimeviewed(dateF.getSeconds() - dateI.getSeconds());
+		if (dateF.getTime() > dateI.getTime()) {
+			setTimeviewed((int)(dateF.getTime() - dateI.getTime()));
 		}else {
 			setTimeviewed(0);
 		}
@@ -80,7 +80,7 @@ public class Movie extends Film implements IVisualisable {
 	
 	public static ArrayList<Movie> makemovieslist (){
 		
-		ArrayList<Movie>  movies = new ArrayList();
+		ArrayList<Movie>  movies = new ArrayList<Movie>();
 
 		//creando movies con un bucle para ahorrar memoria 
 		for (int i = 1; i <= 5; i++) {
