@@ -1,6 +1,8 @@
 package mx.com.titaniumsolutions.Amazon_Vewer;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 import mx.com.titaniumsolutions.Amazon_Vewer.model.*;
 
@@ -10,18 +12,10 @@ public class Main {
 		// TODO Auto-generated method stub
 		showMenu();
 
-		
-		
-		
-
 	}
-
-	
-	
 	
 	public static void showMenu() {
-        
-		int exit = 0;
+        int exit = 0;
 		do {
 			System.out.println("BIENVENIDOS A AMAZON VIEWER");
 			System.out.println("");
@@ -34,7 +28,11 @@ public class Main {
 			System.out.println("6.Report Today");
 			System.out.println("0. Exit");
 			
-			int opcion = 0;
+			
+			//lee la respuesta del usuario en opcion
+			Scanner sc = new Scanner(System.in);
+			int opcion = Integer.valueOf(sc.nextLine()) ;
+			
 			switch (opcion) {
 			case 0: 
 				//salir
@@ -65,6 +63,7 @@ public class Main {
 				break; 
 			
 				
+				
 			}
 			
 		} while (exit != 0);
@@ -73,11 +72,20 @@ public class Main {
 	
 	public static void showMovies() {
 		int exit = 0;
-		
+		ArrayList<Movie> movies = Movie.makemovieslist();
 		do {
 			System.out.println("");
 			System.out.println("::MOVIES::");
 			System.out.println("");
+			for (int i = 0; i < movies.size(); i++) {//imprimirá: 1.movie 1
+				
+				System.out.println(i+1 + "." + movies.get(i).getTitle() + "visto:" + movies.get(i).isViewed());
+				
+			}
+			
+			
+			System.out.println("0. regresar al Menu");
+			System.out.println();
 			
 		} while (exit != 0);
 	}
