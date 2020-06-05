@@ -1,0 +1,21 @@
+
+ ::MOVIE::
+ Title: movie: 2
+ Genre: genero: 2
+ Year: 2022
+ Creator: creador: 2
+ Duration: 122
+
+ ::MOVIE::
+ Title: movie: 3
+ Genre: genero: 3
+ Year: 2023
+ Creator: creador: 3
+ Duration: 123
+
+ ::MOVIE::
+ Title: movie: 5
+ Genre: genero: 5
+ Year: 2025
+ Creator: creador: 5
+ Duration: 125
